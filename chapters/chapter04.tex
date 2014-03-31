@@ -1,0 +1,30 @@
+\chapter{来点英文}
+    Commercial aircraft has a complicated pitot-static system to measure altitude and airspeed. However, it is not realistic to design such a system since it is too expensive and too heavy for our airplane. There is an indirect method to measure the altitude, which is to calculate from the air pressure since air pressure can be measured by electrical modules. The relation between altitude above the sea level and the air pressure is given by the barometric equation.
+    \begin{equation}
+        p=p_0(1-\frac{Lh}{T_0})^{\frac{gM}{RL}}\approx p_0\times exp(-\frac{gMh}{RT_0})
+        \label{equ:baro}
+    \end{equation}
+    The table below shows all the meanings of the parameters
+    \begin{table}[ht]
+        \caption{Paramter values}
+        \centering
+        \begin{tabular}[l]{c c c}
+            \hline\hline
+            Paramter & Description & Value\\
+            \hline
+            $p_0$   & sea level standard atmospheric pressure   & \SI{101325}{\pascal}\\
+            L       & temperature lapse rate                    & \SI{0.0065}{\pascal/\metre}\\
+            $T_0$   & sea level standard temperatur             & \SI{0.0065}{\kelvin}\\
+            g       & earth surface gravitational acceleration  & \SI{9.8066}{\metre/\second\squared}\\
+            M       & molar mass of dry air                     & \SI{0.0289644}{\kilogram/\mole}\\
+            R       & universal gas constant                    & \SI{8.31447}{\joule/(\mole.\kelvin)}\\
+            \hline
+        \end{tabular}
+        \label{table:baro}
+    \end{table}
+
+    A more practical equaltion is
+    \begin{equation}
+        h=44330(1-(\frac{p}{p_0}^{\frac{1}{5.255}}))
+    \end{equation}
+    where $h$ is measured in meters and $p_0=\SI{1013.25}{\hectare\pascal}$
