@@ -12,6 +12,7 @@
 % 可能需要用到的包
 \RequirePackage{amsmath}
 \RequirePackage{mathpazo}
+\RequirePackage{rotating}
 
 % 页边距设置要求：上 2cm，下 2cm，左 2.5cm，右 1.5cm，装订线 0.5cm
 \RequirePackage[top=2cm, left=3cm, bottom=2cm, right=1.5cm]{geometry}
@@ -91,7 +92,7 @@
     \renewcommand{\footskip}{0.5cm}
     \renewcommand{\headrulewidth}{0.4pt} %页眉线宽，设为0可以去页眉线
     \fancyhf{}
-    \fancyhead[C]{\xiaowu\songti\@title}
+    \fancyhead[C]{\xiaowu\songti 苏州大学本科生毕业设计（论文）}
     \fancyfoot[C]{\thepage}
 }
 
@@ -124,9 +125,13 @@
     topadjust         = 0bp,
     justification     = centering
 }
+\renewcommand\arraystretch{2}     % 表格默认行高
+
+\newcommand*{\noaddvspace}{\renewcommand*{\addvspace}[1]{}}
+\addtocontents{lof}{\protect\noaddvspace}   % 清除插图目录段落间距
+\addtocontents{lot}{\protect\noaddvspace}   % 清除表格目录段落间距
 
 %TODO 插图的注释尚未实现
-%TODO 图片的标题与图片间距过小
 
 \AtBeginDocument{\setlength{\baselineskip}{22pt}}
 
@@ -135,19 +140,33 @@
 
 %%% 目录格式
 \RequirePackage{titletoc}
-% 目录标题，四号黑体，居中
+% 目录标题，四号宋体，居中
 \renewcommand{\contentsname}
     {\sihao\songti 目\quad 录}
-% 一级标题：小四号宋体，行距18磅
+% 一级标题：四号黑体，行距 22 磅
 \titlecontents{chapter}[0pt]
     {\sihao\heiti\setlength{\baselineskip}{22pt}}
-    {第{\thecontentslabel}章\quad}
+    %{第{\thecontentslabel}章\quad}   % 目录中文章节样式
+    {\thecontentslabel\ }
+    {}
+    {\titlerule*[10pt]{$\cdot$}\contentspage}
+% 二级标题：四号宋体，行距 22 磅，缩进两字
+\titlecontents{section}[2em]
+    {\sihao\songti\setlength{\baselineskip}{22pt}}
+    %{第{\thecontentslabel}节\quad}   % 目录中文章节样式
+    {\thecontentslabel\ }
     {}
     {\titlerule*[10pt]{$\cdot$}\contentspage}
 
-\titlecontents{section}[2em]
+\titlecontents{figure}[0pt]
     {\sihao\songti\setlength{\baselineskip}{22pt}}
-    {第{\thecontentslabel}节\quad}
+    {图{\thecontentslabel}\quad}   % 插图目录中文样式
+    {}
+    {\titlerule*[10pt]{$\cdot$}\contentspage}
+
+\titlecontents{table}[0pt]
+    {\sihao\songti\setlength{\baselineskip}{22pt}}
+    {表{\thecontentslabel}\quad}   % 表格目录中文样式
     {}
     {\titlerule*[10pt]{$\cdot$}\contentspage}
 
@@ -257,5 +276,6 @@
     colorlinks,
     linkcolor    = black,
     anchorcolor  = black,
-    citecolor    = black
+    citecolor    = black,
+    urlcolor     = black,
 }
