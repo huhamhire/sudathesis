@@ -1,25 +1,29 @@
-\documentclass{sudathesis}
-\graphicspath{{./figures/}}
+\documentclass{sudathesis}                  % 使用模板文档格式 sudathesis.cls
+\graphicspath{{./figures/}}                 % 设置插图文件目录
 
-\usepackage{siunitx}
-\usepackage{esint}
+\usepackage{siunitx}                        % 引用 siunitx 宏包
+\usepackage{esint}                          % 引用 esint 宏包
 
-\title{苏州大学本科生毕业设计（论文）}     % 论文标题
-\author{张三疯}	                           % 论文作者
+\bibliographystyle{thesis}                  % 设置参考文献功能函数 thesis.bst
 
-\begin{document}
-\frontmatter
-\tableofcontents
-%\papertitle
+\title{基于老子理论的红楼梦研究}            % 论文标题
+\author{张三疯}	                            % 论文作者
 
-\newpage
-\mainmatter
+\begin{document}                            % 论文主体部分
+    \frontmatter                            % 设置摘要前的论文格式
+    \tableofcontents                        % 插入章节目录
+    \listoffigures                          % 插入插图目录
+    \listoftables                           % 插入表格目录
+    \papertitle                             % 插入论文标题
 
-\input{./chapters/摘要及关键词.tex}
-\input{./chapters/chapter01.tex}
-\input{./chapters/chapter02.tex}
-\input{./chapters/chapter03.tex}
-\input{./chapters/chapter04.tex}
-\input{./chapters/结论及致谢.tex}
+    \mainmatter                             % 设置目录之后的论文格式
 
+    \input{./chapters/摘要及关键词.tex}     % 插入正文外部章节内容
+    \input{./chapters/chapter01.tex}
+    \input{./chapters/chapter02.tex}
+    \input{./chapters/chapter03.tex}
+    \input{./chapters/chapter04.tex}
+    \input{./chapters/结论及致谢.tex}
+
+    \bibliography{example}                   % 设置参考文献数据文件 example.bib
 \end{document}
