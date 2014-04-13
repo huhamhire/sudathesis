@@ -8,6 +8,8 @@ SudaThesis 是苏州大学本科生毕业论文（设计）的 LaTeX 模板，�
 
 如需使用本模版编写毕业论文，使用者需对 LaTeX 的相关基础知识有所了解。
 
+SudaThesis 模板当前版本：v0.1a
+
 *本模板目前暂未针对苏州大学硕士、博士论文或其他学术论文格式进行相关优化。*
 
 功能介绍
@@ -54,6 +56,12 @@ SudaThesis 模板当前可提供如下功能：
 案会造成印刷质量问题，因此本模版对于正文中相关部分标题理应采用宋体的部分使用了
 黑体替换，以实现最佳印刷效果。
 
+演示样例
+-----
+可以访问 [http://github.huhamhire.com/sudathesis/example.pdf](
+http://github.huhamhire.com/sudathesis/example.pdf) 来获取查看当前最新的模板样
+例演示文档。
+
 
 模板说明
 =====
@@ -90,32 +98,31 @@ Alwin Tsui <alwintsui@gmail.com> 基于 GBT7714-2005N.bst 和 seuthesis.bst 修�
 
 使用模板时，可以参考如下格式规范创建论文主文件，此处为 `thesis.tex`：
 
-    \documentclass{sudathesis}              # 使用模板文档格式 sudathesis.cls
-    \graphicspath{{./figures/}}             # 设置插图文件目录
+    \documentclass{sudathesis}              % 使用模板文档格式 sudathesis.cls
+    \graphicspath{{./figures/}}             % 设置插图文件目录
 
-    \usepackage{siunitx}                    # 引用 siunitx 宏包
-    \usepackage{esint}                      # 引用 esint 宏包
+    \usepackage{siunitx}                    % 引用 siunitx 宏包
+    \usepackage{esint}                      % 引用 esint 宏包
 
-    \bibliographystyle{thesis}              # 设置参考文献功能函数 thesis.bst
+    \bibliographystyle{thesis}              % 设置参考文献功能函数 thesis.bst
 
-    \title{Title of Thesis}                 # 论文标题
-    \author{Author}                         # 论文作者
+    \title{Title of Thesis}                 % 论文标题
+    \author{Author}                         % 论文作者
 
-    \begin{document}                        # 论文主体部分
-        \frontmatter                        # 设置摘要前的论文格式
-        \tableofcontents                    # 插入章节目录
-        \listoffigures                      # 插入插图目录
-        \listoftables                       # 插入表格目录
+    \begin{document}                        % 论文主体部分
+        \frontmatter                        % 设置摘要前的论文格式
+        \tableofcontents                    % 插入章节目录
+        \listoffigures                      % 插入插图目录
+        \listoftables                       % 插入表格目录
+        \papertitle                         % 插入论文标题
 
-        \newpage
-        \mainmatter                         # 设置目录之后的论文格式
-        \papertitle                         # 插入论文标题
+        \mainmatter                         % 设置目录之后的论文格式
 
-        \input{./chapters/chapter01.tex}    # 插入正文外部章节内容
+        \input{./chapters/chapter01.tex}    % 插入正文外部章节内容
         \input{./chapters/chapter02.tex}
         \input{./chapters/chapter03.tex}
 
-        \bibliography{thesis}               # 设置参考文献数据文件 thesis.bib
+        \bibliography{thesis}               % 设置参考文献数据文件 thesis.bib
     \end{document}
 
 正文部分可以使用标准 TeX 语法按章节在外部文件中编写，并在最终用 `\input` 命令
@@ -144,8 +151,8 @@ Alwin Tsui <alwintsui@gmail.com> 基于 GBT7714-2005N.bst 和 seuthesis.bst 修�
 
 模板更新
 -----
-推荐使用 Git 同步 SudaThesis 模板的在线版本库来获取更新，也可自行下载相应分支的压缩包来对模板主文件
-`sudathesis.cls` 和 `thesis.bst` 等进行手动替换升级。
+推荐使用 Git 同步 SudaThesis 模板的在线版本库来获取更新，也可自行下载相应分支
+的压缩包来对模板主文件 `sudathesis.cls` 和 `thesis.bst` 等进行手动替换升级。
 
 模板兼容性
 -----
