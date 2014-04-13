@@ -104,7 +104,7 @@
 \RequirePackage{subfig}         % config兼容subfigure命令
 \RequirePackage{float}          % 可以使用［H］命令
 \RequirePackage{caption}        % 定义图的标题格式：居中. 使用caption3.0
-\DeclareCaptionFont{capFont}{\wuhao\heiti} % 表格名及图名
+\DeclareCaptionFont{capFont}{\wuhao\heiti} % 表格标题及插图标题
 \DeclareCaptionLabelSeparator{figseparator}{\quad}
 \captionsetup{
     labelsep          = figseparator,
