@@ -1,6 +1,7 @@
 %
 % sudathesis.cls - Document class definition file
 % This is the LaTeX template for bachelor's thesis in Soochow University
+% by Hamhire Hu <me@huhamhire.com>, April 2014
 %
 
 \NeedsTeXFormat{LaTeX2e}[1999/12/01]
