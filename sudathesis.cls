@@ -36,18 +36,18 @@
 \XeTeXlinebreakskip = 0pt plus 1pt
 
 % Windows 标准中易字体
-%\setCJKmainfont{SimSun}
-%\setCJKfamilyfont{song}{SimSun}
-%\setCJKfamilyfont{hei}{SimHei}
-%\setCJKfamilyfont{kai}{KaiTi_GB2312}
-%\setCJKfamilyfont{fang}{FangSong_GB2312}
+\setCJKmainfont{SimSun}
+\setCJKfamilyfont{song}{SimSun}
+\setCJKfamilyfont{hei}{SimHei}
+\setCJKfamilyfont{kai}{KaiTi_GB2312}
+\setCJKfamilyfont{fang}{FangSong_GB2312}
 
 % Adobe 字体
-\setCJKmainfont{Adobe Song Std}
-\setCJKfamilyfont{song}{Adobe Song Std}
-\setCJKfamilyfont{hei}{Adobe Heiti Std}
-\setCJKfamilyfont{kai}{Adobe Kaiti Std}
-\setCJKfamilyfont{fang}{Adobe Fangsong Std}
+%\setCJKmainfont{Adobe Song Std}
+%\setCJKfamilyfont{song}{Adobe Song Std}
+%\setCJKfamilyfont{hei}{Adobe Heiti Std}
+%\setCJKfamilyfont{kai}{Adobe Kaiti Std}
+%\setCJKfamilyfont{fang}{Adobe Fangsong Std}
 
 %% 定义中文字体名称
 \newcommand{\songti}{\CJKfamily{song}}      % 宋体
