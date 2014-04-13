@@ -8,6 +8,8 @@ SudaThesis 是苏州大学本科生毕业论文（设计）的 LaTeX 模板，�
 
 如需使用本模版编写毕业论文，使用者需对 LaTeX 的相关基础知识有所了解。
 
+SudaThesis 模板当前版本：v0.1a
+
 *本模板目前暂未针对苏州大学硕士、博士论文或其他学术论文格式进行相关优化。*
 
 功能介绍
@@ -53,6 +55,12 @@ SudaThesis 模板当前可提供如下功能：
 **注意**：由于中易宋体（SimSum）等中文字体并不存在真正意义上的粗字体，伪粗体方
 案会造成印刷质量问题，因此本模版对于正文中相关部分标题理应采用宋体的部分使用了
 黑体替换，以实现最佳印刷效果。
+
+演示样例
+-----
+可以访问 [http://github.huhamhire.com/sudathesis/example.pdf](
+http://github.huhamhire.com/sudathesis/example.pdf) 来获取查看当前最新的模板样
+例演示文档。
 
 
 模板说明
