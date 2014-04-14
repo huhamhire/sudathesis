@@ -28,6 +28,7 @@
 %% 字体设置
 %  使用xeCJK包
 \RequirePackage[BoldFont, SlantFont, CJKnumber]{xeCJK}
+\RequirePackage{type1cm}
 %\rmfamily 使用的字体,默认英文和数字的字体。
 \setmainfont[Mapping=tex-text]{Times New Roman}
 %采用中文断行方式
@@ -70,19 +71,22 @@
 \newcommand{\fangsong}{\CJKfamily{fang}}    % 仿宋
 
 %% 定义字号
-\newcommand{\chuhao}{\fontsize{42pt}{\baselineskip}\selectfont}
-\newcommand{\xiaochu}{\fontsize{36pt}{\baselineskip}\selectfont}
-\newcommand{\yihao}{\fontsize{28pt}{\baselineskip}\selectfont}
-\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
-\newcommand{\xiaoer}{\fontsize{18pt}{\baselineskip}\selectfont}
-\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
-\newcommand{\xiaosan}{\fontsize{15pt}{\baselineskip}\selectfont}
-\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
-\newcommand{\xiaosi}{\fontsize{12pt}{\baselineskip}\selectfont}
-\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
-\newcommand{\xiaowu}{\fontsize{9pt}{\baselineskip}\selectfont}
-\newcommand{\liuhao}{\fontsize{7.875pt}{\baselineskip}\selectfont}
-\newcommand{\qihao}{\fontsize{5.25pt}{\baselineskip}\selectfont}
+\newcommand{\chuhao}{\fontsize{42pt}{63pt}\selectfont}
+\newcommand{\xiaochu}{\fontsize{36pt}{54pt}\selectfont}
+\newcommand{\yihao}{\fontsize{26pt}{39pt}\selectfont}
+\newcommand{\xiaoyi}{\fontsize{24pt}{36pt}\selectfont}
+\newcommand{\erhao}{\fontsize{22pt}{33pt}\selectfont}
+\newcommand{\xiaoer}{\fontsize{18pt}{27pt}\selectfont}
+\newcommand{\sanhao}{\fontsize{16pt}{24pt}\selectfont}
+\newcommand{\xiaosan}{\fontsize{15pt}{22.5pt}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{21pt}\selectfont}
+\newcommand{\xiaosi}{\fontsize{12pt}{18pt}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{15.75pt}\selectfont}
+\newcommand{\xiaowu}{\fontsize{9pt}{13.5pt}\selectfont}
+\newcommand{\liuhao}{\fontsize{7.5pt}{11.25pt}\selectfont}
+\newcommand{\xiaoliu}{\fontsize{6.5pt}{9.75pt}\selectfont}
+\newcommand{\qihao}{\fontsize{5.5pt}{8.25}\selectfont}
+\newcommand{\xiaoqi}{\fontsize{5pt}{7.5}\selectfont}
 
 % 常规字体：小四号宋体
 \renewcommand{\normalsize}{
