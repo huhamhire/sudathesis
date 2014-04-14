@@ -42,12 +42,26 @@
 \setCJKfamilyfont{kai}{KaiTi_GB2312}
 \setCJKfamilyfont{fang}{FangSong_GB2312}
 
+% 华文字体
+%\setCJKmainfont{STSong}
+%\setCJKfamilyfont{song}{STSong}
+%\setCJKfamilyfont{hei}{STHeiti}
+%\setCJKfamilyfont{kai}{STKaiti}
+%\setCJKfamilyfont{fang}{STFangsong}
+
 % Adobe 字体
 %\setCJKmainfont{Adobe Song Std}
 %\setCJKfamilyfont{song}{Adobe Song Std}
 %\setCJKfamilyfont{hei}{Adobe Heiti Std}
 %\setCJKfamilyfont{kai}{Adobe Kaiti Std}
 %\setCJKfamilyfont{fang}{Adobe Fangsong Std}
+
+% 方正字体
+%\setCJKmainfont{FZShuSong-Z01S}
+%\setCJKfamilyfont{song}{FZShuSong-Z01S}
+%\setCJKfamilyfont{hei}{FZHei-B01S}
+%\setCJKfamilyfont{kai}{FZKai-Z03S}
+%\setCJKfamilyfont{fang}{FZFangSong-Z02S}
 
 %% 定义中文字体名称
 \newcommand{\songti}{\CJKfamily{song}}      % 宋体
