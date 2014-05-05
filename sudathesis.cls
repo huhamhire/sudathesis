@@ -28,26 +28,44 @@
 %% 字体设置
 %  使用xeCJK包
 \RequirePackage[BoldFont, SlantFont, CJKnumber]{xeCJK}
+\RequirePackage{type1cm}
 %\rmfamily 使用的字体,默认英文和数字的字体。
 \setmainfont[Mapping=tex-text]{Times New Roman}
+%\ttfamily 使用的等宽字体
+\setmonofont[Mapping=tex-text]{Consolas}
+%\setmonofont[Mapping=tex-text]{Courier New}
 %采用中文断行方式
 \XeTeXlinebreaklocale "zh"
 %字元间可加入0pt~1pt 的弹性间距，这样才能排出左右对齐的段落。
 \XeTeXlinebreakskip = 0pt plus 1pt
 
 % Windows 标准中易字体
-%\setCJKmainfont{SimSun}
-%\setCJKfamilyfont{song}{SimSun}
-%\setCJKfamilyfont{hei}{SimHei}
-%\setCJKfamilyfont{kai}{KaiTi_GB2312}
-%\setCJKfamilyfont{fang}{FangSong_GB2312}
+\setCJKmainfont{SimSun}
+\setCJKfamilyfont{song}{SimSun}
+\setCJKfamilyfont{hei}{SimHei}
+\setCJKfamilyfont{kai}{KaiTi_GB2312}
+\setCJKfamilyfont{fang}{FangSong_GB2312}
+
+% 华文字体
+%\setCJKmainfont{STSong}
+%\setCJKfamilyfont{song}{STSong}
+%\setCJKfamilyfont{hei}{STHeiti}
+%\setCJKfamilyfont{kai}{STKaiti}
+%\setCJKfamilyfont{fang}{STFangsong}
 
 % Adobe 字体
-\setCJKmainfont{Adobe Song Std}
-\setCJKfamilyfont{song}{Adobe Song Std}
-\setCJKfamilyfont{hei}{Adobe Heiti Std}
-\setCJKfamilyfont{kai}{Adobe Kaiti Std}
-\setCJKfamilyfont{fang}{Adobe Fangsong Std}
+%\setCJKmainfont{Adobe Song Std}
+%\setCJKfamilyfont{song}{Adobe Song Std}
+%\setCJKfamilyfont{hei}{Adobe Heiti Std}
+%\setCJKfamilyfont{kai}{Adobe Kaiti Std}
+%\setCJKfamilyfont{fang}{Adobe Fangsong Std}
+
+% 方正字体
+%\setCJKmainfont{FZShuSong-Z01S}
+%\setCJKfamilyfont{song}{FZShuSong-Z01S}
+%\setCJKfamilyfont{hei}{FZHei-B01S}
+%\setCJKfamilyfont{kai}{FZKai-Z03S}
+%\setCJKfamilyfont{fang}{FZFangSong-Z02S}
 
 %% 定义中文字体名称
 \newcommand{\songti}{\CJKfamily{song}}      % 宋体
@@ -56,19 +74,22 @@
 \newcommand{\fangsong}{\CJKfamily{fang}}    % 仿宋
 
 %% 定义字号
-\newcommand{\chuhao}{\fontsize{42pt}{\baselineskip}\selectfont}
-\newcommand{\xiaochu}{\fontsize{36pt}{\baselineskip}\selectfont}
-\newcommand{\yihao}{\fontsize{28pt}{\baselineskip}\selectfont}
-\newcommand{\erhao}{\fontsize{21pt}{\baselineskip}\selectfont}
-\newcommand{\xiaoer}{\fontsize{18pt}{\baselineskip}\selectfont}
-\newcommand{\sanhao}{\fontsize{15.75pt}{\baselineskip}\selectfont}
-\newcommand{\xiaosan}{\fontsize{15pt}{\baselineskip}\selectfont}
-\newcommand{\sihao}{\fontsize{14pt}{\baselineskip}\selectfont}
-\newcommand{\xiaosi}{\fontsize{12pt}{\baselineskip}\selectfont}
-\newcommand{\wuhao}{\fontsize{10.5pt}{\baselineskip}\selectfont}
-\newcommand{\xiaowu}{\fontsize{9pt}{\baselineskip}\selectfont}
-\newcommand{\liuhao}{\fontsize{7.875pt}{\baselineskip}\selectfont}
-\newcommand{\qihao}{\fontsize{5.25pt}{\baselineskip}\selectfont}
+\newcommand{\chuhao}{\fontsize{42pt}{63pt}\selectfont}
+\newcommand{\xiaochu}{\fontsize{36pt}{54pt}\selectfont}
+\newcommand{\yihao}{\fontsize{26pt}{39pt}\selectfont}
+\newcommand{\xiaoyi}{\fontsize{24pt}{36pt}\selectfont}
+\newcommand{\erhao}{\fontsize{22pt}{33pt}\selectfont}
+\newcommand{\xiaoer}{\fontsize{18pt}{27pt}\selectfont}
+\newcommand{\sanhao}{\fontsize{16pt}{24pt}\selectfont}
+\newcommand{\xiaosan}{\fontsize{15pt}{22.5pt}\selectfont}
+\newcommand{\sihao}{\fontsize{14pt}{21pt}\selectfont}
+\newcommand{\xiaosi}{\fontsize{12pt}{18pt}\selectfont}
+\newcommand{\wuhao}{\fontsize{10.5pt}{15.75pt}\selectfont}
+\newcommand{\xiaowu}{\fontsize{9pt}{13.5pt}\selectfont}
+\newcommand{\liuhao}{\fontsize{7.5pt}{11.25pt}\selectfont}
+\newcommand{\xiaoliu}{\fontsize{6.5pt}{9.75pt}\selectfont}
+\newcommand{\qihao}{\fontsize{5.5pt}{8.25}\selectfont}
+\newcommand{\xiaoqi}{\fontsize{5pt}{7.5}\selectfont}
 
 % 常规字体：小四号宋体
 \renewcommand{\normalsize}{
@@ -279,4 +300,26 @@
     anchorcolor  = black,
     citecolor    = black,
     urlcolor     = black,
+}
+\urlstyle{same}
+
+% 程序代码引用
+\RequirePackage{listings}
+\RequirePackage{color}
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\code}{\fontsize{10pt}{12pt}\selectfont\ttfamily}
+\lstset{
+    basicstyle=\code,
+    commentstyle=\itshape,
+    numbers=left,
+    numberstyle=\code,
+    backgroundcolor=\color{light-gray},
+    showstringspaces=false,
+    formfeed=\newpage,
+    tabsize=4,
+    extendedchars=true,
+    escapeinside=``,
+    framexleftmargin=-2em,
+    numbersep=-1.5em,
+    aboveskip=1em
 }
