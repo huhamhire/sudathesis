@@ -8,7 +8,7 @@ SudaThesis 是苏州大学本科生毕业论文（设计）的 LaTeX 模板，�
 
 如需使用本模版编写毕业论文，使用者需对 LaTeX 的相关基础知识有所了解。
 
-SudaThesis 模板当前版本：v0.1a
+SudaThesis 模板当前版本：v0.1.2b
 
 *本模板目前暂未针对苏州大学硕士、博士论文或其他学术论文格式进行相关优化。*
 
@@ -29,7 +29,7 @@ SudaThesis 模板当前可提供如下功能：
 - 支持参考文献管理及引用
 - 部分参考文献支持自动文献标识符设置
 - 目录支持中文或数字两种章节编号格式
-- 支持选择 Windows 预置的中易字体以及 Adobe 中文字体
+- 支持字体集选择
 - 自动生成 PDF 文件内引用链接
 
 排版格式
@@ -52,15 +52,24 @@ SudaThesis 模板当前可提供如下功能：
 - 中文摘要和关键词单独一页
 - 英文摘要和关键词单独一页
 
+可选字体集
+-----
+>
+- Windows 预置的中易字体
+- Mac 环境标准的华文字体
+- Adobe 中文字体
+- 方正字体
+
 **注意**：由于中易宋体（SimSum）等中文字体并不存在真正意义上的粗字体，伪粗体方
 案会造成印刷质量问题，因此本模版对于正文中相关部分标题理应采用宋体的部分使用了
-黑体替换，以实现最佳印刷效果。
+黑体替换，以实现最佳印刷效果。使用者也可以自己指定方正粗宋等用于印刷的正规粗宋
+体实现粗体效果。
 
 演示样例
 -----
 可以访问 [http://github.huhamhire.com/sudathesis/example.pdf](
 http://github.huhamhire.com/sudathesis/example.pdf) 来获取查看当前最新的模板样
-例演示文档。
+例演示文档。演示文档由 kebugcheckex 编写，内容纯属虚构。
 
 
 模板说明
@@ -136,18 +145,18 @@ Alwin Tsui <alwintsui@gmail.com> 基于 GBT7714-2005N.bst 和 seuthesis.bst 修�
 
 正常情况下，使用 BibTex 管理参考文献时，总共需要配合 XeLaTeX 进行四次编译：
 
-    xelatex thesis      # 生成参考文献辅助文件，目录编号辅助文件
-    bibtex thesis       # 生成参考文献数据文件
-    xelatex thesis      # 生成参考文献编号辅助文件，置入目录
-    xelatex thesis      # 置入参考文献编号
+    xelatex thesis.tex      # 生成参考文献辅助文件，目录编号辅助文件
+    bibtex thesis.tex       # 生成参考文献数据文件
+    xelatex thesis.tex      # 生成参考文献编号辅助文件，置入目录
+    xelatex thesis.tex      # 置入参考文献编号
 
 若不使用参考文献功能，需要使用 XeLaTeX 进行两次编译：
 
-    xelatex thesis      # 生成目录编号辅助文件
-    xelatex thesis      # 置入目录
+    xelatex thesis.tex      # 生成目录编号辅助文件
+    xelatex thesis.tex      # 置入目录
 
-**注**：`thesis` 为论文主文件文件名，此处即代表`thesis.tex`文件。推荐 LaTeX 新
-手使用 Texmaker 等 LaTeX 编辑器来编写论文，以及编译输出等操作。
+**注**：`thesis.tex` 为论文主文件。推荐 LaTeX 新手使用 Texmaker 等 LaTeX 编辑
+器来编写论文，以及编译输出等操作。
 
 模板更新
 -----
