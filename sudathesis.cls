@@ -301,6 +301,7 @@
     citecolor    = black,
     urlcolor     = black,
 }
+\urlstyle{same}
 
 % 程序代码引用
 \RequirePackage{listings}
