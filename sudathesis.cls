@@ -31,6 +31,9 @@
 \RequirePackage{type1cm}
 %\rmfamily 使用的字体,默认英文和数字的字体。
 \setmainfont[Mapping=tex-text]{Times New Roman}
+%\ttfamily 使用的等宽字体
+\setmonofont[Mapping=tex-text]{Consolas}
+%\setmonofont[Mapping=tex-text]{Courier New}
 %采用中文断行方式
 \XeTeXlinebreaklocale "zh"
 %字元间可加入0pt~1pt 的弹性间距，这样才能排出左右对齐的段落。
@@ -297,4 +300,25 @@
     anchorcolor  = black,
     citecolor    = black,
     urlcolor     = black,
+}
+
+% 程序代码引用
+\RequirePackage{listings}
+\RequirePackage{color}
+\definecolor{light-gray}{gray}{0.95}
+\newcommand{\code}{\fontsize{10pt}{12pt}\selectfont\ttfamily}
+\lstset{
+    basicstyle=\code,
+    commentstyle=\itshape,
+    numbers=left,
+    numberstyle=\code,
+    backgroundcolor=\color{light-gray},
+    showstringspaces=false,
+    formfeed=\newpage,
+    tabsize=4,
+    extendedchars=true,
+    escapeinside=``,
+    framexleftmargin=-2em,
+    numbersep=-1.5em,
+    aboveskip=1em
 }
