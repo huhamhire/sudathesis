@@ -106,6 +106,7 @@
 }
 
 \RequirePackage{fancyhdr}
+\addtolength\headheight{1.6pt}
 % 摘要开始正文的页面格式
 \renewcommand\mainmatter{
     \pagestyle{fancy}
