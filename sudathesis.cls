@@ -211,7 +211,7 @@
     \xiaosi\heiti 摘\quad 要：
     \normalsize
     \baselineskip    = 22pt
-    \hangindent      = 44pt
+    \hangindent      = 54pt
 }{\par}
 
 %%  中文关键词
@@ -220,7 +220,7 @@
     \xiaosi\heiti 关键词：
     \normalsize
     \baselineskip    = 22pt
-    \hangindent      = 44pt
+    \hangindent      = 54pt
 }{\newpage}        % 中文摘要（和关键词）单独一页
 
 % 英文摘要
@@ -231,7 +231,7 @@
     \xiaosi Abstract:
     \normalsize
     \baselineskip    = 22pt
-    \hangindent      = 50pt
+    \hangindent      = 62pt
 }{\par}
 
 % 英文关键词
@@ -240,7 +240,7 @@
     \xiaosi Keywords:
     \normalsize
     \baselineskip    = 22pt
-    \hangindent      = 58pt
+    \hangindent      = 68pt
 }{\newpage}        % 英文摘要（和关键词）单独一页
 
 %% 定义各章节标题的格式
