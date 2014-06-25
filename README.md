@@ -8,7 +8,7 @@ SudaThesis 是苏州大学本科生毕业论文（设计）的 LaTeX 模板，�
 
 如需使用本模版编写毕业论文，使用者需对 LaTeX 的相关基础知识有所了解。
 
-SudaThesis 模板当前版本：v0.1.2b
+SudaThesis 模板当前版本：v0.1.3b
 
 *本模板目前暂未针对苏州大学硕士、博士论文或其他学术论文格式进行相关优化。*
 
@@ -41,7 +41,7 @@ SudaThesis 模板当前可提供如下功能：
 - 正文三级标题：小四号黑体，缩进两字
 - 正文四级标题：小四号宋体，缩进两字，正文接后
 - 正文字体：小四号宋体，基线行距固定值 22 磅
-- 目录标题：四号宋体，居中
+- 目录标题：四号黑体，居中
 - 目录一级标题：四号黑体，行距 22 磅
 - 目录二级标题：四号宋体，行距 22 磅，缩进两字
 - 表格及插图标题：五号黑体，居中
@@ -96,8 +96,16 @@ Git 版本库分支
 - thesis.bst: 包含用于在 BibTeX 中处理参考文献格式的函数功能。本文件衍生自
 Alwin Tsui <alwintsui@gmail.com> 基于 GBT7714-2005N.bst 和 seuthesis.bst 修改
 的 scutthesis.bst。
-- clean.bat: 用于帮助用户在 Windows 系统下清理临时文件的脚本工具。
-- clean.sh: 用于帮助用户在 Linux 或其它类 Unix 系统下清理临时文件的脚本工具。
+
+辅助脚本
+-----
+- scripts/complie.bat: 用于帮助用户在 Windows 系统下编译论文的脚本工具。可选参
+数为论文 TeX 主文件名，默认值使用`thesis.tex`。
+- scripts/complie.sh: 用于帮助用户在 Linux 或其它类 Unix 系统下编译论文的脚本
+工具。可选参数为论文 TeX 主文件名，默认值使用`thesis.tex`。
+- scripts/clean.bat: 用于帮助用户在 Windows 系统下清理临时文件的脚本工具。
+- scripts/clean.sh: 用于帮助用户在 Linux 或其它类 Unix 系统下清理临时文件的
+脚本工具。
 
 编写论文
 -----
