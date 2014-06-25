@@ -100,12 +100,17 @@
 
 % 摘要之前的页面格式
 \renewcommand\frontmatter{
-    \pagestyle{empty}
-    \renewcommand{\footskip}{0.5cm}
+    \pagestyle{fancy}
+
     \pagenumbering{roman}
+    \renewcommand{\headrulewidth}{0pt}
+    \renewcommand{\footskip}{0.5cm}
+    \fancyhead{}
+    \fancyfoot[C]{\thepage}
 }
 
 \RequirePackage{fancyhdr}
+\addtolength\headheight{1.6pt}
 % 摘要开始正文的页面格式
 \renewcommand\mainmatter{
     \pagestyle{fancy}
@@ -113,7 +118,7 @@
     \renewcommand{\topskip}{0.8cm}
     \renewcommand{\footskip}{0.5cm}
     \renewcommand{\headrulewidth}{0.4pt} %页眉线宽，设为0可以去页眉线
-    \fancyhf{}
+    \fancyhead{}
     \fancyhead[C]{\xiaowu\songti 苏州大学本科生毕业设计（论文）}
     \fancyfoot[C]{\thepage}
 }
@@ -162,21 +167,21 @@
 
 %%% 目录格式
 \RequirePackage{titletoc}
-% 目录标题，四号宋体，居中
+% 目录标题，四号黑体，居中
 \renewcommand{\contentsname}
-    {\sihao\songti 目\quad 录}
+    {\sihao\heiti 目\quad 录}
 % 一级标题：四号黑体，行距 22 磅
 \titlecontents{chapter}[0pt]
     {\sihao\heiti\setlength{\baselineskip}{22pt}}
-    %{第{\thecontentslabel}章\quad}   % 目录中文章节样式
-    {\thecontentslabel\ }
+    {第{\thecontentslabel}章\quad}   % 目录中文章节样式
+    %{\thecontentslabel\ }           % 目录数字章节样式
     {}
     {\titlerule*[10pt]{$\cdot$}\contentspage}
 % 二级标题：四号宋体，行距 22 磅，缩进两字
 \titlecontents{section}[2em]
     {\sihao\songti\setlength{\baselineskip}{22pt}}
-    %{第{\thecontentslabel}节\quad}   % 目录中文章节样式
-    {\thecontentslabel\ }
+    {第{\thecontentslabel}节\quad}   % 目录中文章节样式
+    %{\thecontentslabel\ }           % 目录数字章节样式
     {}
     {\titlerule*[10pt]{$\cdot$}\contentspage}
 
@@ -211,7 +216,7 @@
     \xiaosi\heiti 摘\quad 要：
     \normalsize
     \baselineskip    = 22pt
-    \hangindent      = 44pt
+    \hangindent      = 54pt
 }{\par}
 
 %%  中文关键词
@@ -220,7 +225,7 @@
     \xiaosi\heiti 关键词：
     \normalsize
     \baselineskip    = 22pt
-    \hangindent      = 44pt
+    \hangindent      = 54pt
 }{\newpage}        % 中文摘要（和关键词）单独一页
 
 % 英文摘要
@@ -231,7 +236,7 @@
     \xiaosi Abstract:
     \normalsize
     \baselineskip    = 22pt
-    \hangindent      = 50pt
+    \hangindent      = 62pt
 }{\par}
 
 % 英文关键词
@@ -240,7 +245,7 @@
     \xiaosi Keywords:
     \normalsize
     \baselineskip    = 22pt
-    \hangindent      = 58pt
+    \hangindent      = 68pt
 }{\newpage}        % 英文摘要（和关键词）单独一页
 
 %% 定义各章节标题的格式
